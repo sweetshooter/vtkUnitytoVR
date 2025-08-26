@@ -290,12 +290,12 @@ public class VTKFireFlowDemo : MonoBehaviour
         }
         
         // 更新 ColorBar
-        var colorBar = GameObject.FindObjectOfType<VTKColorBar>();
-        if (colorBar != null)
+        var simpleColorBar = GameObject.FindObjectOfType<SimpleVRColorBar>();
+        if (simpleColorBar != null)
         {
-            colorBar.UpdateRange(globalTMin, globalTMax);
+            simpleColorBar.UpdateRange(globalTMin, globalTMax);
         }
-        
+                
         vtkIdList ids = vtkIdList.New();
         int lineIndex = 0;
         
